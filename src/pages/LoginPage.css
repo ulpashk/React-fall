@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* General page layout */
+
+body {
+  font-family: 'Poppins';
+}
+
+.login-page {
+  font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  position: relative; /* To contain absolutely positioned elements */
+}
+
+.content {
+  text-align: center;
+  z-index: 2; /* To ensure it's above the background images */
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'Poppins';
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 64px;
+  padding-bottom: 30px;
+}
+
+.login-box {
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  padding: 20px;
+  border:#ff007f solid ;
+  border-radius: 15px; /* Rounded corners */
+  border-width: 3px;
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.login-box h2 {
+  margin-bottom: 2rem;
+}
+
+.input-field {
+  font-family: 'Poppins';
+  font-weight: 300;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.login-button {
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  width: 87%;
+  padding: 10px;
+  background-color: #ff007f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ff4da6;
+}
+
+h2 {
+  font-family: 'Poppins';
+  font-weight: 400;
+  display: flex;
+  justify-self: start;
+  margin-left: 21px;
+}
+
+/* Background images */
+.background-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* To place it behind the form */
+  overflow: hidden; /* To avoid images exceeding container bounds */
+}
+
+.login-img2 {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 20%;
+  opacity: 0.8;
+}
+
+.login-img1 {
+  position: absolute;
+  top: 5%;
+  opacity: 0.8;
+  margin-top: 150px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20px; /* Отступ от бегущей строки до h1 */
+}
+
+.marquee span {
+  display: inline-block;
+  font-family: 'Poppins';
+  color: #ff0099;
+  font-size: 50px;
+  letter-spacing: 10px;
+  padding-left: 0;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
